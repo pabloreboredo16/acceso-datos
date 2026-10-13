@@ -1,6 +1,6 @@
 # Acceso a Datos
 
-Este repositorio reúne una colección de pequeños ejercicios con conceptos fundamentales de gestión de datos.
+Este repositorio reúne una colección de ejercicios con conceptos fundamentales de gestión de datos.
 
 ## 📁 Contenido
 
