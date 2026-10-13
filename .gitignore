@@ -1,0 +1,16 @@
+# Carpetas de configuración local
+**/.vscode/
+
+# Archivos compilados y binarios de Java
+**/bin/
+*.class
+
+# Archivos de registro o logs
+*.log
+
+# Librerías
+**/lib/
+
+# Archivos temporales
+.DS_Store
+Thumbs.db
