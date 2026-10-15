@@ -14,3 +14,7 @@
 # Archivos temporales
 .DS_Store
 Thumbs.db
+
+# Imagenes
+accesoDatos1/src/ficherosSAX/LectorAlumnos.PNG
+accesoDatos1/src/ficherosSAX/LectorLibreria.PNG
