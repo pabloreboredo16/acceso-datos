@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+    <alumno id="1">
+        <nombre>Lucía</nombre>
+        <apellidos>Fernández Rey</apellidos>
+        <ciclo>DAM</ciclo>
+        <nota>8.5</nota>
+    </alumno>
+    <alumno id="2">
+        <nombre>Pablo</nombre>
+        <apellidos>Souto Vidal</apellidos>
+        <ciclo>DAM</ciclo>
+        <nota>6.0</nota>
+    </alumno>
+    <alumno id="3">
+        <nombre>Marta</nombre>
+        <apellidos>Iglesias Pena</apellidos>
+        <ciclo>DAW</ciclo>
+        <nota>9.25</nota>
+    </alumno>
+    <alumno id="4">
+        <nombre>Diego</nombre>
+        <apellidos>Costas Lemos</apellidos>
+        <ciclo>DAM</ciclo>
+        <nota>4.75</nota>
+    </alumno>
+    <alumno id="5">
+        <nombre>Noa</nombre>
+        <apellidos>Rodríguez Alonso</apellidos>
+        <ciclo>DAW</ciclo>
+        <nota>7.5</nota>
+    </alumno>
+    <alumno id="6">
+        <nombre>Hugo</nombre>
+        <apellidos>Barreiro Gil</apellidos>
+        <ciclo>DAM</ciclo>
+        <nota>5.0</nota>
+    </alumno>
+    <alumno id="7">
+        <nombre>Carla</nombre>
+        <apellidos>Pérez Otero</apellidos>
+        <ciclo>ASIR</ciclo>
+        <nota>7.0</nota>
+    </alumno>
+    <alumno id="8">
+        <nombre>Iván</nombre>
+        <apellidos>Domínguez Cao</apellidos>
+        <ciclo>DAM</ciclo>
+        <nota>9.0</nota>
+    </alumno>
+    <alumno id="9">
+        <nombre>Sara</nombre>
+        <apellidos>Vázquez Lage</apellidos>
+        <ciclo>ASIR</ciclo>
+        <nota>3.5</nota>
+    </alumno>
+    <alumno id="10">
+        <nombre>Álvaro</nombre>
+        <apellidos>Mouriño Seoane</apellidos>
+        <ciclo>DAW</ciclo>
+        <nota>6.75</nota>
+    </alumno>
+</alumnos>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libreria>
+    <libro isbn="978-84-376-0494-7" idioma="es">
+        <titulo>Cien años de soledad</titulo>
+        <autor>Gabriel García Márquez</autor>
+        <editorial>Debolsillo</editorial>
+        <anio>1967</anio>
+        <precio moneda="EUR">12.95</precio>
+    </libro>
+    <libro isbn="978-0-13-468599-1" idioma="en">
+        <titulo>Effective Java</titulo>
+        <autor>Joshua Bloch</autor>
+        <editorial>Addison-Wesley</editorial>
+        <anio>2018</anio>
+        <precio moneda="USD">49.99</precio>
+    </libro>
+    <libro isbn="978-84-415-4358-9" idioma="es">
+        <titulo>Acceso a datos en Java</titulo>
+        <autor>Marta Lorenzo</autor>
+        <editorial>Paraninfo</editorial>
+        <anio>2020</anio>
+        <precio moneda="EUR">28.00</precio>
+    </libro>
