@@ -8,3 +8,4 @@ El código fuente (`src/`) se encuentra organizado por:
 
 * **Repsao de Programación Orientada a Objetos:** Herencia, interfaces, excepciones y swing
 * **Ficheros:** Lectura y escritura de archivos de texto, aleatorios, XML, serialización de objetos y utilidades de I/O.
+* **Acceso a Bases de Datos**
