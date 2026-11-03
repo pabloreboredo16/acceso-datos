@@ -6,6 +6,7 @@ import java.sql.*;
 
 public class ConexionSwing extends JFrame {
 
+    // ATRIBUTOS
     private JTextField txtUsuario = new JTextField("root", 12);
     private JPasswordField txtContrasena = new JPasswordField(12);
     private JTextField txtServidor = new JTextField("127.0.0.1", 8);
@@ -14,16 +15,18 @@ public class ConexionSwing extends JFrame {
     private JButton btnCargarBD = new JButton("Cargar BDs");
     private JButton btnConectar = new JButton("Conectar");
     private JButton btnTablas = new JButton("Mostrar Tablas");
+    private JButton btnActualizarPrecios = new JButton("Actualizar precios productos");
     private boolean conectado = false;
 
+    // CONSTRUCTOR
     public ConexionSwing() {
 
-        setTitle("MySQL");
-        setSize(525, 280);
+        setTitle("Formulario de conexión");
+        setSize(525, 320);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        JPanel panelMain = new JPanel(new GridLayout(6, 2, 5, 5));
+        JPanel panelMain = new JPanel(new GridLayout(7, 2, 5, 5));
 
         panelMain.add(new JLabel("Usuario:")); 
         panelMain.add(txtUsuario);
@@ -41,7 +44,9 @@ public class ConexionSwing extends JFrame {
         panelMain.add(panelBD);
 
         panelMain.add(new JLabel("")); 
+        panelMain.add(btnActualizarPrecios);
         
+        panelMain.add(new JLabel(""));
         JPanel panelBotones = new JPanel(new GridLayout(1, 2, 5, 0));
         panelBotones.add(btnConectar);
         panelBotones.add(btnTablas);
@@ -53,9 +58,11 @@ public class ConexionSwing extends JFrame {
         btnCargarBD.addActionListener(e -> cargarBasesDeDatos());
         btnConectar.addActionListener(e -> conectar());
         btnTablas.addActionListener(e -> mostrarTablas());
+        btnActualizarPrecios.addActionListener(e -> abrirActualizarPrecios());
     }
 
-    // 2. Validaciones
+    // METODOS PROPIOS
+    // 1. Metodo para validar campos de la conexion
     private boolean validarCampos() {
         if (txtUsuario.getText().trim().isEmpty() || txtServidor.getText().trim().isEmpty() || txtPuerto.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Completa Usuario, Servidor y Puerto.", "Aviso", JOptionPane.WARNING_MESSAGE);
@@ -71,14 +78,14 @@ public class ConexionSwing extends JFrame {
         return true;
     }
 
-    // Método para obtener la conexión
+    // 2. Método para obtener la conexión
     private Connection getConexion(String bd) throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
         String url = "jdbc:mysql://" + txtServidor.getText().trim() + ":" + txtPuerto.getText().trim() + "/" + bd;
         return DriverManager.getConnection(url, txtUsuario.getText().trim(), new String(txtContrasena.getPassword()));
     }
 
-    // 4. Metodo pata cargar BDs en JComboBox
+    // 3. Metodo pata cargar BDs en JComboBox
     private void cargarBasesDeDatos() {
         if (!validarCampos()) return;
 
@@ -91,7 +98,7 @@ public class ConexionSwing extends JFrame {
         }
     }
 
-    // 1, 3. Conectar y ejecutar consulta SELECT
+    // 4. Metodo para ejecutar consulta SELECT
     private void conectar() {
 
         if (conectado) {
@@ -120,6 +127,7 @@ public class ConexionSwing extends JFrame {
         }
     }
 
+    // 5. Metodo para mostrar la ventana de las tablas de la base de datos seleccionada
     private void mostrarTablas() {
         if (!conectado) {
             JOptionPane.showMessageDialog(this, "Debes conectarte antes de mostrar las tablas.", "Aviso", JOptionPane.WARNING_MESSAGE);
@@ -138,6 +146,30 @@ public class ConexionSwing extends JFrame {
         }
     }
 
+    // 6. Metodo para abrir la ventana de actualizar precios
+    private void abrirActualizarPrecios() {
+        if (!conectado) {
+            JOptionPane.showMessageDialog(this, "Debes estar conectado a la base de datos.", "Aviso", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        String bdSeleccionada = (String) comboBaseDatos.getSelectedItem();
+        if (bdSeleccionada == null || !bdSeleccionada.equalsIgnoreCase("Northwind")) {
+            JOptionPane.showMessageDialog(this, "Debes seleccionar la base de datos Northwind.", "Aviso", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        try {
+            Connection con = getConexion(bdSeleccionada);
+            new VentanaActualizarPrecios(this, con).setVisible(true);
+            con.close();
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    // METODO MAIN
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new ConexionSwing().setVisible(true));
     }
