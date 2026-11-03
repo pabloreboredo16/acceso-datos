@@ -8,9 +8,6 @@
 # Archivos de registro o logs
 *.log
 
-# Librerías
-**/lib/
-
 # Archivos temporales
 .DS_Store
 Thumbs.db
@@ -21,3 +18,8 @@ accesoDatos1/src/ficherosSAX/LectorLibreria.PNG
 
 # Bases de datos
 *.sql
+
+# Ejecutables   
+*.jar
+**/*.jar
+!**/lib/mysql-connector-j-8.4.0.jar
