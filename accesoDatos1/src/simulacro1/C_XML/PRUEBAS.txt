@@ -1,0 +1,19 @@
+Prueba | Resultado esperado | Resultado obtenido
+Listar DOM | 
+    Muestra lista de alumnos (ID, Nombre, Ciclo, Nota) | 
+    Alumno [ID: 10, Nombre: Ana, Ciclo: DAM, Nota: 8.0], Alumno [ID: 20, Nombre: Luis, Ciclo: DAW, Nota: 6.5], Alumno [ID: 30, Nombre: Eva, Ciclo: DAM, Nota: 9.0]
+Actualizar DOM | 
+    Modifica la nota del alumno con ID 20 a 9.0 y guarda en un nuevo fichero | 
+    Fichero alumnos_actualizados.xml generado correctamente con la nota actualizada
+Resumen SAX (DAM) | 
+    Muestra 2 alumnos con nota media de 8.5 | 
+    Resumen SAX (DAM): 2 alumnos, media = 8.5
+Resumen SAX (ASIR) | 
+    Notifica que no se encontraron alumnos para ese ciclo | 
+    Resumen SAX (ASIR): No se encontraron alumnos.
+ID inexistente (Negativa) | 
+    Falla al intenatar encontrar al alumno con id 99 | 
+    Excepcion: IllegalArgumentException: Alumno no encontrado: 99
+Fichero malformado (Negativa) | 
+    Falla al intentar parsear un XML invalido | 
+    Excepcion: FileNotFoundException

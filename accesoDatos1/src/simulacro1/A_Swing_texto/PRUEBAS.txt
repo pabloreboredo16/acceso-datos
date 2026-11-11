@@ -1,0 +1,19 @@
+Prueba | 
+    Resultado esperado 
+    Resultado obtenido
+
+1. Abrir 'alumnos.txt' | 
+    Carga los 3 alumnos. 
+    Carga a Ana, Luis y Eva.
+2. Abrir 'alumnos_error.txt' | 
+    Muestra mensaje de error 
+    Salta el mensaje: El archivo contiene notas con formato inválido.
+3. Agregar alumno | 
+    Añade el alumno a la tabla.
+    Añade Pablo, DAM, 10
+4. Agregar nota inválida | 
+    Salta aviso de error.
+    Salta el mensaje: La nota debe ser un número válido.
+5. Guardar | 
+    Exporta la tabla al fichero con el nombre indicado.
+    Se genera el archivo con el nombre indicado y formato Nombre;Ciclo;Nota.

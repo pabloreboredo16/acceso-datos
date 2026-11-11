@@ -1,0 +1,16 @@
+Prueba | Resultado esperado | Resultado obtenido
+Buscar | 
+    Muestra lista de alumnos filtrados por nombre (LIKE) | 
+    Alumno [ID: 1, Nombre: Ana, Nota: 8.50], Alumno [ID: 2, Nombre: Luis, Nota: NULL]
+Insertar | 
+    Retorna la clave autogenerada (RETURN_GENERATED_KEYS) | 
+    ID generado: 3
+Cambiar notas | 
+    Modifica las notas de dos alumnos en una misma transacción | 
+    Transacción completada con éxito.
+Mostrar metadatos | 
+    Muestra la versión de BD y estructura de columnas de la tabla | 
+    Base de Datos: MySQL 8.0... Tabla alumno tiene 3 columnas: id (INT), nombre (VARCHAR), nota (DECIMAL)
+Rollback (Negativa) | 
+    Falla por ID 999999 inexistente y deshace los cambios (rollback) | 
+    Excepcion: SQLException: No existe el alumno con ID: 999999.

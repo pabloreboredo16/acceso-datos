@@ -1,0 +1,20 @@
+Prueba | 
+    Resultado esperado 
+    Resultado obtenido
+
+1. Lectura (alumnos.dat) | 
+    Leer y mostrar la lista de alumnos guardada. 
+    Se muestran los alumnos del fichero (id, nombre, nota, clave).
+2. Actualización (notas_fijas.dat) | 
+    Modificar la nota del registro 1 a 9.0 con RandomAccessFile. 
+    La nota de la posición 1 pasa a ser 9.0.
+3. Lectura fija | 
+    Recorrer e imprimir las notas (doubles de 8 bytes). 
+    Muestra la lista actualizada.
+4. Serialización y deserialización | 
+    Guardar y recuperar objetos Alumno con id, nombre, nota y 
+        clave a null al ser atributo transient (no se guarda al serializar). 
+    Se recupera la lista de Alumnos correctamente desde alumnos.ser.
+5. Prueba negativa | 
+    Falla por indice fuera de rango
+    Excepcion: IndexOutOfBoundsException

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+  <alumno id="10"><nombre>A<![CDATA[na]]></nombre><ciclo>DAM</ciclo><nota>8.0</nota></alumno>
+  <alumno id="20"><nombre>Luis</nombre><ciclo>DAW</ciclo><nota>6.5</nota></alumno>
+  <alumno id="30"><nombre>Eva</nombre><ciclo>DAM</ciclo><nota>9.0</nota></alumno>
+</alumnos>
