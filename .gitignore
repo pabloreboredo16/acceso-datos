@@ -1,12 +1,22 @@
 # Carpetas de configuración local
 **/.vscode/
+**/.idea/
+**/*.iml
+**/.settings/
+**/.project
+**/.classpath
 
-# Archivos compilados y binarios de Java
+# Archivos compilados y binarios de Java (Estándar, Maven y Gradle)
 **/bin/
+**/target/
+**/build/
+**/.gradle/
+**/out/
 *.class
 
 # Archivos de registro o logs
 *.log
+**/logs/
 
 # Archivos temporales
 .DS_Store
@@ -16,10 +26,22 @@ Thumbs.db
 accesoDatos1/src/ficherosSAX/LectorAlumnos.PNG
 accesoDatos1/src/ficherosSAX/LectorLibreria.PNG
 
-# Bases de datos
-*.sql
+# Paquetes
+accesoDatos1/src/conexionExamen/
 
-# Ejecutables   
+# Bases de datos (Scripts y bases embebidas como H2 o SQLite)
+*.sql
+*.db
+*.mv.db
+*.trace.db
+*.sqlite
+*.sqlite3
+
+# Ejecutables y dependencias (manteniendo los drivers de lib/)
 *.jar
 **/*.jar
-!**/lib/mysql-connector-j-8.4.0.jar
+!**/lib/*.jar
+
+# Credenciales locales (opcional, por si separas tus contraseñas)
+**/.env
+**/hibernate.cfg.local.xml

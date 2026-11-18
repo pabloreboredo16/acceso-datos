@@ -173,4 +173,4 @@ public class ConexionSwing extends JFrame {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new ConexionSwing().setVisible(true));
     }
-}
+} 
