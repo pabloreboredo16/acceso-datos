@@ -1,3 +1,5 @@
+package simulacro1.B_Binarios;
+
 import java.io.*;
 import java.nio.file.*;
 import java.util.*;

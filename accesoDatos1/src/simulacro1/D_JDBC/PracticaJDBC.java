@@ -1,3 +1,5 @@
+package simulacro1.D_JDBC;
+
 import java.sql.*;
 import java.math.BigDecimal;
 public class PracticaJDBC {

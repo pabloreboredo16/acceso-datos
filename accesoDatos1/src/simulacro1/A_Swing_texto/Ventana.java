@@ -1,3 +1,5 @@
+package simulacro1.A_Swing_texto;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;

@@ -1,3 +1,5 @@
+package simulacro1.C_XML;
+
 import java.nio.file.*;
 import javax.xml.parsers.*;
 import javax.xml.transform.*;

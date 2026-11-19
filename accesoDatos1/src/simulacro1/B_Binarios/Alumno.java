@@ -1,3 +1,5 @@
+package simulacro1.B_Binarios;
+
 import java.io.Serializable;
 
 public class Alumno implements Serializable { // TODO: serialización, serialVersionUID y transient
