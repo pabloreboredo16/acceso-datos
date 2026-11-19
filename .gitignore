@@ -22,6 +22,9 @@
 .DS_Store
 Thumbs.db
 
+# Librerías
+**/lib/
+
 # Imagenes
 accesoDatos1/src/ficherosSAX/LectorAlumnos.PNG
 accesoDatos1/src/ficherosSAX/LectorLibreria.PNG
