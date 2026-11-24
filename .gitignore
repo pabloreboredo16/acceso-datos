@@ -48,3 +48,6 @@ accesoDatos1/src/conexionExamen/
 # Credenciales locales (opcional, por si separas tus contraseñas)
 **/.env
 **/hibernate.cfg.local.xml
+
+# Capturas de consola en ejemploORM
+ejemploORM/hibernate-demo/src/main/images/
