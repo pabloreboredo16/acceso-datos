@@ -13,7 +13,6 @@ import jakarta.persistence.Table;
 @Table(name = "film")
 public class Pelicula {
 
-    // ATRIBUTOS
     @Id
     @Column(name = "film_id")
     private Integer id;
@@ -31,11 +30,9 @@ public class Pelicula {
     @JoinColumn(name = "language_id", insertable = false, updatable = false)
     private Idioma idioma;
 
-    // CONSTRUCTOR
     protected Pelicula() {
     }
 
-    // GETTERS Y SETTERS
     public Integer getId() { return id; }
     public String getTitulo() { return titulo; }
     public BigDecimal getTarifa() { return tarifa; }

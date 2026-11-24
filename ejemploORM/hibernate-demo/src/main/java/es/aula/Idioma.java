@@ -8,6 +8,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "language")
 public class Idioma {
+    
     @Id
     @Column(name = "language_id")
     private Integer id;
