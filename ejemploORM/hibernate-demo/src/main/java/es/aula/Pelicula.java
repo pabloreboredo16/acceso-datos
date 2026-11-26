@@ -33,11 +33,28 @@ public class Pelicula {
     protected Pelicula() {
     }
 
-    public Integer getId() { return id; }
-    public String getTitulo() { return titulo; }
-    public BigDecimal getTarifa() { return tarifa; }
-    public Idioma getIdioma() { return idioma; }
-    
+    public Pelicula(String titulo, Integer idiomaId, BigDecimal tarifa) {
+        this.titulo = titulo;
+        this.idiomaId = idiomaId;
+        this.tarifa = tarifa;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public BigDecimal getTarifa() {
+        return tarifa;
+    }
+
+    public Idioma getIdioma() {
+        return idioma;
+    }
+
     public void setTarifa(BigDecimal tarifa) {
         this.tarifa = tarifa;
     }
