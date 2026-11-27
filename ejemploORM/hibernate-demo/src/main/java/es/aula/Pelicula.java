@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -14,6 +16,7 @@ import jakarta.persistence.Table;
 public class Pelicula {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "film_id")
     private Integer id;
 
@@ -39,21 +42,13 @@ public class Pelicula {
         this.tarifa = tarifa;
     }
 
-    public Integer getId() {
-        return id;
-    }
+    public Integer getId() { return id; }
 
-    public String getTitulo() {
-        return titulo;
-    }
+    public String getTitulo() { return titulo; }
 
-    public BigDecimal getTarifa() {
-        return tarifa;
-    }
+    public BigDecimal getTarifa() { return tarifa; }
 
-    public Idioma getIdioma() {
-        return idioma;
-    }
+    public Idioma getIdioma() { return idioma; }
 
     public void setTarifa(BigDecimal tarifa) {
         this.tarifa = tarifa;
